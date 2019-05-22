@@ -1,0 +1,184 @@
+/*自定义css*/
+/*-------------公用样式------------*/
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, button, input, textarea, form, th, td, div {
+    padding: 0;
+    margin: 0;
+    border: none;
+    color: #fff;/*	font-family: Microsoft YaHei, 宋体, tahoma, arial, 'Hiragino Sans GB', sans-serif;*/
+}
+body, button, input, select, textarea {
+    outline: none;
+}
+a, a:visited {
+    color: #fff;
+}
+a:focus, input:hover, button:hover, input[type='button']:hover {
+    outline: none;
+}
+a:active, a:hover {
+    /*color: #fff;*/
+}
+a, a:hover, a:focus {
+    text-decoration: none!important;
+}
+a:focus, input:hover, button:hover, input[type='button']:hover {
+    outline: none;
+}
+i, em, cite {
+    font-style: normal;
+}
+input[type="button"], input[type="submit"], input[type="reset"], input[type="text"] {
+    -webkit-appearance: none;
+}
+input[type=checkbox], input[type=radio], label {
+    vertical-align: middle;
+}
+textarea{
+    -webkit-appearance: none;
+}
+video{
+    width:100%;
+}
+/* 禁止webkit横屏改变字体大小 */
+
+html {
+    line-height: 1.15; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: normal;
+}
+ul, li {
+    list-style: none;
+}
+iframe {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+textarea {
+    resize: none;
+}
+
+label {
+    font-weight: 400;
+}
+
+label {
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+/* 点击去除阴影 */
+
+a, button, input, i {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -moz-tap-highlight-color: rgba(0,0,0,0);
+    -ms-tap-highlight-color: rgba(0,0,0,0);
+    tap-highlight-color: rgba(0,0,0,0);
+}
+/* 图片自适应调整 并解决图片缩放的失真问题*/
+img {
+    display: inline-block;
+    max-width: 100%;
+    border: none;
+    interpolation-mode: bicubic;
+    -ms-interpolation-mode: bicubic;
+}
+
+/*--------------------*/
+/* 自动换行 */
+
+.word-auto {
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+
+body {
+    background-color: #f5f5f9;
+    font-size: 14px;
+}
+
+
+.yy-button {
+    display: block;
+    outline: 0 none;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+    height: 47px;
+    line-height: 47px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    white-space: nowrap;
+    color: #000;
+    background-color: #fff;
+    border: 1PX solid #ddd;
+    border-radius: 5px;
+}
+
+.yy-space {
+    height: 30px;
+}
+
+.yy-forbiddenClick{
+    pointer-events: none;
+}
+
+
+.networkConfig-div {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    margin-top: 35px;
+}
+
+
+.networkConfig {
+    height: 42px;
+    margin-top: 25px;
+}
+.yy-button-primary {
+    color: #fff;
+    background-color: #108ee9;
+    border: 1PX solid #108ee9;
+    border-radius: 5px;
+}
+
+.yy-button-inline {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+
+
+
+
+
+
+

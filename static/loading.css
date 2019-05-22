@@ -1,0 +1,203 @@
+
+
+/*#load{*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background: rgba(0,0,0,0);*/
+/*}*/
+/*#load img{*/
+    /*width:60px;*/
+    /*height: 60px;*/
+
+    /*position:absolute;*/
+    /*top: 50%;*/
+    /*left:50%;*/
+    /*margin-left: -30px;*/
+    /*margin-top: -30px;*/
+/*}*/
+/*.animation_style{*/
+    /*animation: mov 2s linear infinite;*/
+/*}*/
+/*@keyframes mov{*/
+    /*from{*/
+        /*transform:rotate(0deg);*/
+    /*}to{*/
+         /*transform:rotate(359deg);*/
+     /*}*/
+/*}*/
+
+#loadHud{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 9, 9, 0.09);
+    /*background-color:red;*/
+    /*background-color: red;*/
+    top: 0px;
+    z-index:100;
+}
+
+.m-load2{
+
+    width:80px;
+    height:80px;
+    /*margin:auto;*/
+    position:absolute;
+    /*top: 50%;*/
+    /*right:50%;*/
+    background:#535353;
+}
+
+
+/** 加载动画的静态样式 **/
+.m-load2{
+    /*position:relative;*/
+}
+
+.m-load2 .line div{
+    background-color: #535353;
+    position:absolute;
+    left:39px;
+    top:22px;
+
+    width:2px;
+    height:36px;
+
+}
+
+/*:after 选择器在被选元素的内容后面插入内容。
+请使用 content 属性来指定要插入的内容。*/
+.m-load2 .line div:before,.m-load2 .line div:after{
+    content:'';
+    display:block;
+    height:50%;
+    background:#fcfcfc;
+    /*background:red;*/
+    border-radius:5px;
+}
+
+
+.m-load2 .circleBg{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:18px;
+    height:18px;
+    margin:-9px 0 0 -9px;
+    background:#535353;
+    /*background:red;*/
+    border-radius:18px;
+}
+
+/*:nth-child(n) 选择器匹配属于其父元素的第 N 个子元素，不论元素的类型。
+n 可以是数字、关键词或公式。*/
+/*-webkit-transform:支持safari,chrome, 2D rotate(): 旋转角度*/
+.m-load2 .line div:nth-child(2){
+    -webkit-transform:rotate(30deg);
+}
+
+.m-load2 .line div:nth-child(3){
+    -webkit-transform:rotate(60deg);
+}
+
+.m-load2 .line div:nth-child(4){
+    -webkit-transform:rotate(90deg);
+}
+
+.m-load2 .line div:nth-child(5){
+    -webkit-transform:rotate(120deg);
+}
+
+.m-load2 .line div:nth-child(6){
+    -webkit-transform:rotate(150deg);
+}
+
+
+
+
+
+/*参数:
+animation-name: 规定需要绑定到选择器的 keyframe 名称。
+animation-duration: 规定完成动画所花费的时间，以秒或毫秒计。
+animation-timing-function: 规定动画的速度曲线。
+animation-delay: 规定在动画开始之前的延迟。
+animation-iteration-count: 规定动画应该播放的次数。
+animation-direction: 规定是否应该轮流反向播放动画。
+*/
+/*linear: 动画从头到尾的速度是相同的。*/
+/*infinite: 规定动画应该无限次播放。*/
+/*
+alternate: 动画应该轮流反向播放。
+normal: 默认值。动画应该正常播放。
+*/
+.m-load2 .line div:nth-child(1):before{
+    -webkit-animation:load 1.8s linear 0s infinite;
+}
+
+.m-load2 .line div:nth-child(2):before{
+    -webkit-animation:load 1.8s linear 0.15s infinite;
+}
+
+.m-load2 .line div:nth-child(3):before{
+    -webkit-animation:load 1.8s linear 0.30s infinite;
+}
+
+.m-load2 .line div:nth-child(4):before{
+    -webkit-animation:load 1.8s linear 0.45s infinite;
+}
+
+.m-load2 .line div:nth-child(5):before{
+    -webkit-animation:load 1.8s linear 0.60s infinite;
+}
+
+.m-load2 .line div:nth-child(6):before{
+    -webkit-animation:load 1.8s linear 0.75s infinite;
+}
+
+
+
+.m-load2 .line div:nth-child(1):after{
+    -webkit-animation:load 1.8s linear 0.9s infinite;
+}
+
+.m-load2 .line div:nth-child(2):after{
+    -webkit-animation:load 1.8s linear 1.15s infinite;
+}
+
+.m-load2 .line div:nth-child(3):after{
+    -webkit-animation:load 1.8s linear 1.30s infinite;
+}
+
+.m-load2 .line div:nth-child(4):after{
+    -webkit-animation:load 1.8s linear 1.45s infinite;
+}
+
+.m-load2 .line div:nth-child(5):after{
+    -webkit-animation:load 1.8s linear 1.60s infinite;
+}
+
+.m-load2 .line div:nth-child(6):after{
+    -webkit-animation:load 1.8s linear 1.75s infinite;
+}
+
+/** 加载动画 **/
+@-webkit-keyframes load{
+    0%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+
+
+
+
+
+
+

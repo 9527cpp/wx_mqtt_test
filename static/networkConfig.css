@@ -1,0 +1,97 @@
+
+.yy-container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.yy-table{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    height: 50px;
+    /*border-bottom: 1px solid red;*/
+
+}
+
+
+.yy-table dt,.yy-table dd,.yy-table li{
+    display: table-cell;
+    /*vertical-align: middle !important;*/
+}
+
+.yy-table dt {
+    /*background: red;*/
+    width: 10%;
+}
+.yy-table dd {
+
+}
+.yy-table dt .dt-imgTop{
+    width: 20px;
+    height: 20px;
+}
+.yy-table dt .dt-imgBottom{
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+    width: .10em;
+    height: 20px;
+}
+
+.yy-table dd span{
+    /*background: yellow;*/
+    color: #000000;
+    font-size: 13px;
+}
+
+
+/*.networkConfig-div {*/
+    /*display: flex;*/
+    /*align-items: start;*/
+    /*justify-content: center;*/
+    /*width: 100%;*/
+    /*margin-top: 35px;*/
+/*}*/
+
+
+/*.networkConfig {*/
+    /*height: 42px;*/
+    /*margin-top: 25px;*/
+/*}*/
+
+.networkConfig-skip{
+    height: 64px;
+
+}
+
+.yy-button-primary:focus, .yy-button-primary:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/*.n-develop{*/
+    /*margin:0 auto;*/
+    /*background:url(../images/line.gif) repeat-y .84rem;*/
+/*}*/
+
+
+
+/*.yy-button-primary {*/
+    /*color: #fff;*/
+    /*background-color: #108ee9;*/
+    /*border: 1PX solid #108ee9;*/
+    /*border-radius: 5px;*/
+/*}*/
+
+/*.yy-button-inline {*/
+    /*display: inline-block;*/
+    /*padding: 0 15px;*/
+/*}*/
+
+
+
+
+

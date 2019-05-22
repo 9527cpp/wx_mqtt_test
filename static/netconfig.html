@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- saved from url=(0119)https://www.deepbrain.ai/wxWifiConfig/networkConfig.html?openid=oVLsttzDcws791BJYVsc-aBtb3QI&deviceType=gh_58a79ee1b632 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="referrer" content="always">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>联网配置</title>
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="./toast.css" rel="stylesheet">
+    <link href="./loading.css" rel="stylesheet">
+    <link href="./common.css" rel="stylesheet">
+    <link href="./networkConfig.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="yy-container">
+    <div class="networkConfig-hitTitle">
+        <div style="margin-left: 10px; margin-top: 26px; color: rgb(97, 97, 97);">配置设备上网前确定已完成以下准备:</div>
+    </div>
+    <div class="yy-space"></div>
+
+
+    <div class="networkConfig-intro">
+        <dl class="yy-table">
+            <!--<dt>January 2012</dt>-->
+            <dt><img class="dt-imgTop" src="./select.png"><img class="dt-imgBottom" src="./line.gif"></dt>
+            <dd><span>1.确保设备已经开机</span></dd>
+            <!--<dt><img src="Images/select.png"></dt>-->
+        </dl>
+        <dl class="yy-table">
+            <!--<dt>January 2013</dt>-->
+            <dt><img class="dt-imgTop" src="./select.png"><img class="dt-imgBottom" src="./line.gif"></dt>
+            <dd><span>2.同时长按配网按键，直到听到设备播报“请打开公众号配置网络”的提示音。</span></dd>
+        </dl>
+        <dl class="yy-table">
+            <!--<dt>June 2013</dt>-->
+            <dt><img class="dt-imgTop" src="./select.png"><img class="dt-imgBottom" src="./line.gif"></dt>
+            <dd><span>3.点击下面的“一键配网”，按照提示联网。</span></dd>
+        </dl>
+        <dl class="yy-table">
+            <!--<dt>June 2014</dt>-->
+            <dt><img class="dt-imgTop" src="./select.png"><img class="dt-imgBottom" src="./line.gif"></dt>
+            <dd><span>注:机器人不支持5G WiFi连接。</span></dd>
+        </dl>
+        <dl class="yy-table">
+            <!--<dt>June 2014</dt>-->
+            <dt><img class="dt-imgTop" src="./select.png"></dt>
+            <dd><span>注:如果一直没有连接成功，请重新操作一次。</span></dd>
+        </dl>
+
+    </div>
+
+    <div class="networkConfig-div networkConfig">
+        <a role="button" class="yy-button yy-button-primary yy-button-inline" aria-disabled="true" style="width: 80%;" onclick="networkConfigWX()">
+            <span>&nbsp;&nbsp;一键配网&nbsp;&nbsp;</span>
+        </a>
+    </div>
+
+    <div class="networkConfig-div networkConfig-skip">
+        <a role="button" class="yy-button" aria-disabled="true" style="width: 80%;" onclick="skipNetworkConfigWX()">
+            <span>设备已联网，跳过此步骤</span>
+        </a>
+    </div>
+
+    <!--<p id="test" style="height: 40px;color: red;text-align: center">测试测试测试</p>-->
+
+</div>
+<div id="loadHud" style=""><div class="m-load2" style="top: 278px; left: 751px;"><div class="line"> <div></div><div></div><div></div><div></div><div></div><div></div></div><div class="circleBg"></div></div></div>
+<div style="display: none" id="toast" onclick="hideAction()"><div id="toastCenter"> <div class="msgHit">解除绑定</div> <div class="TextContent"> <lable id="TextLabel">您确定要解绑xx儿童机器人?</lable></div><div class="alertBtn"><div class="btnDiv cancelBtn" onclick="cancelBtnClick()">取消</div><div class="btnDiv ensureBtn" onclick="ensureBtnClick()">确定</div></div></div>  </div>
+
+<script src="./jweixin-1.2.0.js" type="text/javascript"></script>
+<script src="./jquery-3.2.1.min.js"></script>
+<script src="./bootstrap.min.js"></script>
+<script src="./sha1.js"></script>
+<script src="./loading.js"></script>
+<script src="./toast.js"></script>
+<script src="./store.js"></script>
+<script src="./common.js"></script>
+<script src="./networkConfig.js"></script>
+
+<script>
+    // + store.get('openid') + '&appId=' + store.get('appId') + '&robotId=' + store.get('robotId');
+    function networkConfigWX() {
+         alert('networkConfigWX()');
+         $("#test").text('点击配网按钮');
+        
+        if (isInitWXJSSDKSuccess){
+            window.wx.invoke('configWXDeviceWiFi', {}, function(res){
+                var err_msg = res.err_msg;
+                if(err_msg == 'configWXDeviceWiFi:ok') {
+                    window.location.href = 'scanDevice.html?openid=' + store.get('openid') + '&deviceType=' + store.get('deviceType');
+                } else {
+                    // $("#test").text(JSON.stringify(res));
+                }
+            });
+        } else {
+            // toastView.toastText('微信配置中');
+            // toastView.showToast();
+        }
+
+    }
+
+    function skipNetworkConfigWX() {
+        // alert('skipNetworkConfigWX()');
+        window.location.href = 'scanDevice.html?openid=' + store.get('openid') + '&deviceType=' + store.get('deviceType');
+
+        //扫描设备
+        // window.wx.invoke('startScanWXDevice', {'connType':'lan'}, function(res) {
+        //     console.log('startScanWXDevice',res);
+        //     alert('startScanWXDevice--' + JSON.stringify(res));
+        // });
+        //
+        // // 扫描设备结果WeixinJSBridge.on
+        // window.wx.on("onScanWXDeviceResult",
+        //     function(res) {
+        //         alert('onScanWXDeviceResult' + JSON.stringify(res));
+        //         console.log('onScanWXDeviceResult',res);
+        //         if ("0" === res.isCompleted) {
+        //             // alert(res.devices.length);
+        //             addDeviceList(res.devices);
+        //         }
+        //     });
+    }
+
+    // function ensureBtnClick() {
+    //     event.stopPropagation();
+    //     $("#toast").hide();
+    // }
+
+</script>
+
+
+
+
+
+</body></html>
